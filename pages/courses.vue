@@ -9,7 +9,6 @@
         <Cards :message="message" />
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 

@@ -17,6 +17,17 @@
           />
         </figure>
       </div>
+      <div class="coulmn is-10">
+        <div class="columns is-multiline">
+          <div
+            class="column is-4 mt-2"
+            v-for="i in article.attributes.assignments.data"
+            v-bind:key="i.id"
+          >
+            <AssignmentCard :i="i" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
