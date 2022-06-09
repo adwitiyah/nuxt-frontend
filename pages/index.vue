@@ -149,7 +149,7 @@ img.column {
     font-size: 16px;
   }
   .box {
-    height: auto;
+    height: 350px;
   }
   .image-container {
     display: flex;
