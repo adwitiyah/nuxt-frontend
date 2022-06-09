@@ -12,7 +12,7 @@
             </h1>
             <br />
             <h2 class="subtitle" style="color:#393e5b">
-              We help young talent get discovered by the<br />
+              We help young talent get discovered by the
               leading tech companies.
             </h2>
           </div>
@@ -120,6 +120,9 @@ div {
   max-width: 50%;
   height: auto;
 }
+.image-container {
+  align-self: center;
+}
 .left-align {
   margin-left: 180px;
 }
@@ -127,12 +130,16 @@ a.button {
   margin-left: -12px;
 }
 img.column {
-  width: 60%;
-  margin-left: 60px;
+  width: 85%;
+  /* margin-left: 60px; */
 }
 .box {
   height: 350px;
   text-align: left;
+}
+.box h2 {
+  font-weight: 600;
+  line-height: 40px;
 }
 @media screen and (max-width: 50em) {
   .left-align {
@@ -143,6 +150,14 @@ img.column {
   }
   .box {
     height: 300px;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  img.column {
+    width: 75%;
+    margin: 0 20px;
   }
 }
 </style>
