@@ -1,13 +1,19 @@
 <template>
   <div>
-    <div v-for="article in articles.data" v-bind:key="article.id">
+    <div
+      v-for="article in articles.data"
+      v-bind:key="article.id"
+      class="hero-container"
+    >
       <!-- <div
         v-if="article.content"
         id="editor"
         v-html="$md.render(article.content)"
       ></div> -->
+      <div class="text-container">
       <h1>{{ article.attributes.Title }}</h1>
-      <h1>{{ article.attributes.Description }}</h1>
+      <h3>{{ article.attributes.Description }}</h3>
+      </div>
       <div v-for="i in article.attributes.image.data" v-bind:key="i.id">
         <figure>
           <img
@@ -53,3 +59,19 @@ export default {
   },
 };
 </script>
+<style scoped>
+.hero-container {
+  height: auto;
+}
+.text-container {
+  height: 300px;
+  background-color: #333;
+  padding-top: 60px;
+  padding-left: 80px;
+  /* color: #fff; */
+}
+.text-container h1 {
+  color: #fff;
+  font-size: 36px;
+}
+</style>

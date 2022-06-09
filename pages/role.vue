@@ -19,7 +19,7 @@
                     v-bind:class="{ 'is-active': !activeCategory }"
                     @click="setActiveCategory(null)"
                   >
-                    All courses
+                    All Roles
                   </a>
                 </li>
                 <li
@@ -33,8 +33,8 @@
             </aside>
           </div>
 
-          <div class="coulmn is-10">
-            <div class="cloumns is-multiline">
+          <div class="column is-10">
+            <div class="columns is-multiline">
               <div
                 class="column is-4"
                 v-for="message in messages.data"

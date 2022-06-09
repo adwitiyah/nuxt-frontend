@@ -7,9 +7,9 @@
         v-bind:key="i.id"
       >
         <div class="media-content">
-          <figure>
+          <figure class="image">
             <img
-              style="width: 200px"
+              class="role-img"
               :src="`http://localhost:1337${i.attributes.url}`"
               alt=""
               srcset=""
@@ -38,3 +38,9 @@ export default {
   props: ["message"],
 };
 </script>
+<style scoped>
+.role-img {
+  max-width: auto;
+  height: 200px;
+}
+</style>
