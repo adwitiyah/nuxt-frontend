@@ -57,6 +57,10 @@ export default {
       }
     }
   },
+  target: 'static',
+  router: {
+    base: '/nuxt-frontend/'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
