@@ -24,7 +24,7 @@
       </div>
       <NuxtLink
         :to="{
-          name: 'articles-slug',
+          name: 'courses-slug',
           params: { slug: message.attributes.Slug },
         }"
         >Know More</NuxtLink
