@@ -32,6 +32,9 @@
             >
             <input type="file" name="myFile" class="drop-zone__input" />
           </div>
+          <div class="file-tuhmbnail">
+            
+          </div>
         </div>
       </div>
     </div>
