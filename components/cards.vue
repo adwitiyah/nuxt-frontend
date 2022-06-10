@@ -9,7 +9,6 @@
         <div class="media-content">
           <figure>
             <img
-              style="width: 200px"
               :src="`http://localhost:1337${i.attributes.url}`"
               alt=""
               srcset=""

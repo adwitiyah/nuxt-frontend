@@ -48,22 +48,26 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <!-- <template v-if="$store.state.user.isAuthenticated"> -->
-            <!-- <router-link to="/dashboard/my-account" class="button is-info"
-                >My account</router-link
-              > -->
-            <!-- </template> -->
+            <template v-if="isAuthenticated">
+              <router-link to="/user/me">My-Account</router-link>
+              <a
+                class="button is-info"
+                href="/logout"
+                @click.prevent="userLogout"
+                >Logout</a
+              >
+            </template>
 
-            <!-- <template v-else> -->
-            <router-link to="/signup" class="button is-primary"
-              ><strong
-                ><span class="sign-up">Sign up</span></strong
-              ></router-link
-            >
-            <router-link to="/login" class="button is-light"
-              >Log in</router-link
-            >
-            <!-- </template> -->
+            <template v-else>
+              <router-link to="/signup" class="button is-primary"
+                ><strong
+                  ><span class="sign-up">Sign up</span></strong
+                ></router-link
+              >
+              <router-link to="/login" class="button is-light"
+                >Log in</router-link
+              >
+            </template>
           </div>
         </div>
       </div>
@@ -72,11 +76,20 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
+  computed: {
+    ...mapGetters(["isAuthenticated"]),
+  },
   data: function () {
     return {
       showNav: false,
     };
+  },
+  methods: {
+    async userLogout() {
+      await this.$auth.logout();
+    },
   },
 };
 </script>

@@ -16,7 +16,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:"stylesheet", type:"text/css", href:'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css' }
+      { rel:"stylesheet", type:"text/css", href:'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css' },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400&display=swap",
+      },
     ]
   },
 
@@ -27,7 +31,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/balm-ui'
+    '@/plugins/balm-ui',
+    '~plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -41,7 +46,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/apollo',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
   markdownit: {
     preset: 'default',
@@ -60,5 +67,34 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+    axios: {
+      baseURL: process.env.STRAPI_URL || 'http://localhost:1337/api'
+    },
+  
+    auth: {
+      // Options
+      strategies: {
+        local: {
+          token: {
+            property: 'jwt',
+          },
+          user: {
+            property: false,
+          },
+          endpoints: {
+            login: {
+              url: 'auth/local',
+              method: 'post',
+            },
+            user: {
+              url: 'users/me',
+              method: 'get',
+            },
+            logout: false,
+          },
+        },
+      },
+    }
 }
