@@ -16,13 +16,19 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:"stylesheet", type:"text/css", href:'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css' }
+      { rel:"stylesheet", type:"text/css", href:'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css' },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Oxygen&display=swap",
+      },
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'balm-ui/dist/balm-ui.css'
+    'balm-ui/dist/balm-ui.css',
+    '~layouts/global.css'
+
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
