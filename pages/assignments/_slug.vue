@@ -30,10 +30,13 @@
             <span class="drop-zone__prompt"
               >Drop file here or click to upload</span
             >
-            <input type="file" name="myFile" class="drop-zone__input" />
+            <input type="file" name="myFile" class="drop-zone__input" required/>
           </div>
           <div class="file-tuhmbnail">
-            
+            <p class="ouput-message"><span id="output"></span></p>
+          </div>
+          <div class="submit-button">
+            <button type="submit">Upload Assessment</button>
           </div>
         </div>
       </div>
@@ -43,6 +46,7 @@
 
 <script>
 import { assignmentQuery } from "../../graphql/assignmentQuery";
+
 export default {
   data() {
     return {
@@ -132,6 +136,12 @@ export default {
       } else {
         thumbnailElement.style.backgroundImage = null;
       }
+      const outputMessage = () => {
+        const fileName = thumbnailElement.dataset.label;
+        document.getElementById("output").innerHTML = "Name: " + fileName;
+        return fileName
+      }
+      outputMessage();
     }
   },
 };
@@ -230,5 +240,29 @@ h1.title {
   background: rgba(255, 255, 255, 0.75);
   font-size: 14px;
   text-align: center;
+}
+.submit-button {
+  margin-top: 10px;
+  padding: 15px 25px;
+  background-color: #1666f7;
+  width: fit-content;
+  border: none;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.submit-button button {
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+@media screen and (max-width: 50em) {
+  .assessment-title {
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 }
 </style>
