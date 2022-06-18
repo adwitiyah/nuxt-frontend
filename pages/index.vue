@@ -37,7 +37,7 @@
               <p>No Job requisitions required.</p>
               <p>
                 We set clear expectations for each role, to avoid those long
-                listskills/nice haves more suited.
+                list of skills/nice haves more suited.
               </p>
               <p></p>
             </div>
@@ -116,7 +116,87 @@ img.column {
 </style>
 
 <script>
+// import axios from "axios";
+
+// import CourseItem from "@/components/CourseItem.vue";
+
 export default {
-  name: "IndexPage",
+  name: "Home",
+  data() {
+    return {
+      courses: [],
+    };
+  },
+  // components: {
+  //   CourseItem,
+  // },
+  mounted() {
+    console.log("mounted");
+
+    document.title = "Welcome | SkillPoofed";
+
+    // axios.get("courses/get_frontpage_courses/").then((response) => {
+    //   console.log(response.data);
+
+    //   this.courses = response.data;
+    // });
+  },
 };
 </script>
+
+<style>
+/* .image img {
+  width: auto;
+  height: auto;
+  max-width: 50%;
+  max-height: 100%;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.body {
+  max-width: 50%;
+  height: auto;
+}
+.image-container {
+  align-self: center;
+}
+.left-align {
+  margin-left: 180px;
+}
+a.button {
+  margin-left: -12px;
+}
+img.column {
+  width: 85%;
+  /* margin-left: 60px; */
+}
+.box {
+  height: 350px;
+  text-align: left;
+}
+.box h2 {
+  font-weight: 600;
+  line-height: 40px;
+}
+@media screen and (max-width: 50em) {
+  .left-align {
+    margin-left: 20px;
+  }
+  h2.subtitle {
+    font-size: 16px;
+  }
+  .box {
+    height: 350px;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  img.column {
+    width: 75%;
+    margin: 0 20px;
+  }
+}
+</style>
