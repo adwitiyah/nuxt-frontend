@@ -26,6 +26,7 @@
           <div class="sub-title">
           <h3>Submit your assignments down below once you've completed them.</h3>
           </div>
+          <form>
           <div class="drop-zone">
             <span class="drop-zone__prompt"
               >Drop file here or click to upload</span
@@ -36,8 +37,9 @@
             <p class="ouput-message"><span id="output"></span></p>
           </div>
           <div class="submit-button">
-            <button type="submit">Upload Assessment</button>
+            <input type="submit" value="Upload Assessment">
           </div>
+          </form>
         </div>
       </div>
     </div>
@@ -46,6 +48,7 @@
 
 <script>
 import { assignmentQuery } from "../../graphql/assignmentQuery";
+// import { axios } from axios;
 
 export default {
   data() {
@@ -66,6 +69,22 @@ export default {
     },
   },
   mounted() {
+    // const instance = axios.create({
+    // baseURL: 'https://localhost:1337/api/upload',
+    // timeout: 10000,
+    // headers: {'X-Custom-Header': 'foobar'}
+    // });
+    // const form = document.querySelector('form');
+
+    // form.addEventListener('submit', async (e) => {
+    //   e.preventDefault();
+
+    //   await fetch('/api/upload', {
+    //     method: 'post',
+    //     body: new FormData(e.target)
+    //   });
+    // });
+
     document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       const dropZoneElement = inputElement.closest(".drop-zone");
 
@@ -184,7 +203,7 @@ h1.title {
   padding-bottom: 45px;
 }
 .drop-zone {
-  max-width: 50%;
+  width: 50%;
   height: 200px;
   padding: 25px;
   display: flex;
@@ -263,6 +282,31 @@ h1.title {
   padding-top: 30px;
   padding-left: 15px;
   padding-right: 15px;
+}
+.assessment-content {
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.download-content {
+  padding: 15px;
+}
+.sub-title {
+  padding: 15px;
+  width: 100%;
+}
+.submission-container {
+  padding-left: 15px;
+  padding-right: 15px ;
+  padding-bottom: 45px;
+}
+.drop-zone {
+  width: 100%;
+}
+.submit-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 }
 </style>

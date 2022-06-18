@@ -24,7 +24,7 @@
         </div>
 
         <div class="image-container">
-          <img class="column" src="../assets/homedesign1.png" />
+          <img class="column" src="../..//assets/homedesign1.png" />
         </div>
       </div>
     </div>

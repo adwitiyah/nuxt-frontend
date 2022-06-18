@@ -60,13 +60,13 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:1337/graphql',
+        httpEndpoint: 'https://strapi-skillproof-blog.herokuapp.com/graphql',
       }
     }
   },
   target: 'static',
   router: {
-    base: '/nuxt-frontend/'
+    base: '/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
