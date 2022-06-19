@@ -68,6 +68,12 @@
 </template>
 
 <script>
+export default {
+  mounted() {
+    document.title = "Login | SkillProofed";
+  },
+};
+
 // import axios from "axios";
 // import api from "../utils/api";
 // export default {

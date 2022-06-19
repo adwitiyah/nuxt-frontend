@@ -26,7 +26,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'balm-ui/dist/balm-ui.css'
+'balm-ui/dist/balm-ui.css',
+    '~layouts/global.css'
+
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -60,7 +62,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:1337/graphql',
+        httpEndpoint: 'https://strapi-skillproof-blog.herokuapp.com/graphql',
       }
     }
   },
@@ -74,7 +76,7 @@ export default {
   },
 
     axios: {
-      baseURL: process.env.STRAPI_URL || 'http://localhost:1337/api'
+      baseURL: process.env.STRAPI_URL || 'https://strapi-skillproof-blog.herokuapp.com/api'
     },
   
     auth: {

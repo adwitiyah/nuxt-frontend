@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    /* src: local("Oxygen"), */
+     src: url(~assets/static/Montserrat-Black.ttf) format("truetype");
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}

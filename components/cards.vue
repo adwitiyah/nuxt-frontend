@@ -9,7 +9,7 @@
         <div class="media-content">
           <figure class="assessment-image">
             <img
-              :src="`http://localhost:1337${i.attributes.url}`"
+              :src="`https://strapi-skillproof-blog.herokuapp.com${i.attributes.url}`"
               alt=""
               srcset=""
             />

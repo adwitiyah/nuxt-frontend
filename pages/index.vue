@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home is-family-sans-serif">
     <div
       class="hero is-info is-medium"
       style="background-color: white; gap: 20px"
@@ -9,9 +9,8 @@
           <div class="left-align">
             <h1 class="title" style="color: #fba04d">Welcome to ScaleUP!</h1>
             <br />
-            <h2 class="subtitle" style="color: #393e5b">
-              We help young talent get discovered by the<br />
-              leading tech companies.
+            <h2 class="subtitle is-family-sans-serif" style="color: #393e5b">
+              We help young talent get discovered by the leading tech companies.
             </h2>
           </div>
           <div class="column left-align">
@@ -145,14 +144,14 @@ export default {
 </script>
 
 <style>
-/* .image img {
-  width: auto;
-  height: auto;
-  max-width: 50%;
-  max-height: 100%;
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+div {
+  font-family: 'Montserrat', sans-serif;
 } */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap");
-body {
+html {
+  font-family: "Oxygen";
+}
+.subtitle {
   font-family: "Montserrat", sans-serif;
 }
 .body {

@@ -15,12 +15,7 @@
 
               <ul class="menu-list">
                 <li>
-                  <a
-                    v-bind:class="{ 'is-active': !activeCategory }"
-                    @click="setActiveCategory(null)"
-                  >
-                    All Roles
-                  </a>
+                  <a> All Roles </a>
                 </li>
                 <li
                   v-for="data in roles"
@@ -53,6 +48,9 @@
 <script>
 import { messageQuery } from "../graphql/query";
 export default {
+  mounted() {
+    document.title = "Roles | SkillProofed";
+  },
   name: "IndexPage",
   data() {
     return {
@@ -68,8 +66,8 @@ export default {
 };
 </script>
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap");
 div {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 </style>

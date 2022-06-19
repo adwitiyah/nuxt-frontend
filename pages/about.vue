@@ -6,16 +6,14 @@
       </div>
     </div>
 
-    <section class="section">
-      THis is the about page
-    </section>
+    <section class="section">THis is the about page</section>
   </div>
 </template>
 
 <script>
 export default {
   mounted() {
-    document.title = 'About | StudyNet'
-  }
-}
+    document.title = "About | SkillProofed";
+  },
+};
 </script>
